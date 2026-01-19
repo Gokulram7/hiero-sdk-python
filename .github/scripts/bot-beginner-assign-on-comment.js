@@ -57,7 +57,7 @@ const fs = require("fs");
 
 const SPAM_LIST_PATH = ".github/spam-list.txt";
 const REQUIRED_GFI_COUNT = 1;
-const GFI_LABEL = 'good first issue';
+const GFI_LABEL = 'Good First Issue';
 const BEGINNER_GUARD_MARKER = '<!-- beginner-gfi-guard -->';
 
 function isSafeSearchToken(value) {
@@ -76,6 +76,7 @@ async function countCompletedGfiIssues(github, owner, repo, username) {
   const searchQuery = [
     `repo:${owner}/${repo}`,
     `label:"${GFI_LABEL}"`,
+    'is:issue',
     'is:closed',
     `author:${username}`,
   ].join(' ');

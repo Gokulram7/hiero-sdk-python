@@ -188,6 +188,8 @@ module.exports = async ({ github, context }) => {
 
     // 4. Logic Branch
     if (isAssignCommand) {
+      console.log('[Beginner Bot] ASSIGN command detected');
+      console.log('[Beginner Bot] Current assignees:', issue.assignees?.map(a => a.login));
       const completedGfiCount = await countCompletedGfiIssues(
         github,
         repo.owner.login,

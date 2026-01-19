@@ -77,7 +77,7 @@ async function countCompletedGfiIssues(github, owner, repo, username) {
     `repo:${owner}/${repo}`,
     `label:"${GFI_LABEL}"`,
     'is:closed',
-    `invlovles:${username}`,
+    `author:${username}`,
   ].join(' ');
 
   console.log('[Beginner Bot] Search query:', searchQuery);

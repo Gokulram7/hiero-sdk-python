@@ -78,7 +78,7 @@ async function countCompletedGfiIssues(github, owner, repo, username) {
     `label:"${GFI_LABEL}"`,
     'is:issue',
     'is:closed',
-    `assignee:${username}`,
+    `invlovles:${username}`,
   ].join(' ');
 
   const result = await github.graphql(

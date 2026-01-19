@@ -57,7 +57,7 @@ const fs = require("fs");
 
 const SPAM_LIST_PATH = ".github/spam-list.txt";
 const REQUIRED_GFI_COUNT = 1;
-const GFI_LABEL = 'Good First Issue';
+const GFI_LABEL = 'good first issue';
 const BEGINNER_GUARD_MARKER = '<!-- beginner-gfi-guard -->';
 
 function isSafeSearchToken(value) {
